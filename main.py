@@ -11,9 +11,9 @@ def optimize(num):
  mylistfile = open("thread-"+str(num)+".txt", "r")
  for filename in mylistfile:
   filename = filename.replace('\n', "")
-  im = Image.open("stare/"+filename)
+  im = Image.open("old/"+filename)
   im.thumbnail((1000, 1000))
-  im.save("nowe/"+filename,optimize=True,quality=45)
+  im.save("new/"+filename,optimize=True,quality=45)
  mylistfile.close()
  return num;
 
@@ -103,6 +103,6 @@ def main():
  while j <= theads :
   os.remove("thread-"+str(j)+".txt")
   j += 1 
- 
+ print("Thanks for use :)")
 if __name__ == "__main__":
  main()
